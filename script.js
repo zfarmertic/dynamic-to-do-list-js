@@ -8,23 +8,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const taskText = taskInput.value.trim();
         console.log(taskText)
         if(taskText === ''){
-            alert("Enter a task")
-        }else{
+            alert("Enter a task");
+            return;
+        }
             const li = document.createElement('li');
             li.textContent = taskText;
             taskList.appendChild(li)
-            const btn = document.createElement('button');
-            btn.textContent = 'Remove';
-            btn.classList(remove-btn)
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remove';
+            removeBtn.classList.add("remove-btn");
 
-            btn.addEventListener('click', ()=>{
+            removeBtn.onclick = function(){
                 li.remove();
-            })
+            }
 
-            li.appendChild(btn);
+            li.appendChild(removeBtn);
             taskInput.value = ' '
-
-        }
+        
     }
 
     document.getElementById('add-task-btn').addEventListener('click', addTask)
