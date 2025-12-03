@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     }
 
-    document.getElementById('add-task-btn').addEventListener('click', addTask)
+    
+    addButton.addEventListener('click', addTask)
     taskInput.addEventListener("keypress", (e)=>{
         if(e.key === 'Enter'){
             e.preventDefault();
